@@ -71,7 +71,8 @@
     "note": "tui-note --tag=$(git describe --tags)",
     "ts2js": "tsc --outDir tmpdoc --sourceMap false --target ES2015 --noEmit false",
     "doc:dev": "npm run ts2js && tuidoc --serv",
-    "doc": "npm run ts2js && tuidoc"
+    "doc": "npm run ts2js && tuidoc",
+    "prepare": "npm run build"
   },
   "devDependencies": {
     "@toast-ui/release-notes": "^2.0.1",

@@ -17,6 +17,9 @@ const pkgMap = {
   code: '@toast-ui/editor-plugin-code-syntax-highlight',
   table: '@toast-ui/editor-plugin-table-merged-cell',
   uml: '@toast-ui/editor-plugin-uml',
+  abc: '@toast-ui/editor-plugin-abc',
+  mathjax: '@toast-ui/editor-plugin-mathjax',
+  alphatex: '@toast-ui/editor-plugin-alphatex',
 };
 
 const pathMap = {
@@ -29,6 +32,9 @@ const pathMap = {
   code: 'plugins/code-syntax-highlight',
   table: 'plugins/table-merged-cell',
   uml: 'plugins/uml',
+  abc: 'plugins/abc',
+  mathjax: 'plugins/mathjax',
+  alphatex: 'plugins/alphatex',
 };
 
 let script;
@@ -56,7 +62,7 @@ if (!script) {
 
 if (!pkg) {
   throw new Error(
-    `You should choose "editor", "react", "vue", "toastmark", "chart", "color", "code", "uml", "table"
+    `You should choose "editor", "react", "vue", "toastmark", "chart", "color", "code", "uml", "table", "abc", "alphatex", "mathjax"
     as the configuration of type
     `
   );

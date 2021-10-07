@@ -1,7 +1,7 @@
 {
-  "name": "@toast-ui/editor-plugin-table-merged-cell",
-  "version": "3.0.0",
-  "description": "TOAST UI Editor : Table Merged Cell Plugin",
+  "name": "@toast-ui/editor-plugin-mathjax",
+  "version": "1.0.0",
+  "description": "TOAST UI Editor : MathJax Plugin",
   "keywords": [
     "nhn",
     "toast",
@@ -9,22 +9,20 @@
     "toast-ui",
     "editor",
     "plugin",
-    "table",
-    "merged-cell"
+    "mathjax"
   ],
-  "main": "dist/toastui-editor-plugin-table-merged-cell.js",
+  "main": "dist/toastui-editor-plugin-mathjax.js",
+  "types": "index.d.ts",
   "files": [
     "dist/*.js",
-    "dist/*.css",
-    "types/index.d.ts"
+    "index.d.ts"
   ],
-  "types": "types/index.d.ts",
   "author": "NHN FE Development Lab <dl_javascript@nhn.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/nhn/tui.editor.git",
-    "directory": "plugins/table-merged-cell"
+    "directory": "plugins/mathjax"
   },
   "bugs": {
     "url": "https://github.com/nhn/tui.editor/issues"
@@ -41,6 +39,12 @@
     "build:cdn": "webpack build --env cdn & webpack build --env cdn minify",
     "build": "webpack build && npm run build:cdn",
     "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "cross-env": "^6.0.3"
+  },
+  "dependencies": {
+    "mathjax-full": "^3.2.0"
   },
   "publishConfig": {
     "access": "public"

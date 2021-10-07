@@ -1,7 +1,7 @@
 {
-  "name": "@toast-ui/editor-plugin-table-merged-cell",
-  "version": "3.0.0",
-  "description": "TOAST UI Editor : Table Merged Cell Plugin",
+  "name": "@toast-ui/editor-plugin-alphatex",
+  "version": "1.0.0",
+  "description": "TOAST UI Editor : alphaTex Plugin",
   "keywords": [
     "nhn",
     "toast",
@@ -9,22 +9,20 @@
     "toast-ui",
     "editor",
     "plugin",
-    "table",
-    "merged-cell"
+    "alphaTex"
   ],
-  "main": "dist/toastui-editor-plugin-table-merged-cell.js",
+  "main": "dist/toastui-editor-plugin-alphatex.js",
+  "types": "index.d.ts",
   "files": [
     "dist/*.js",
-    "dist/*.css",
-    "types/index.d.ts"
+    "index.d.ts"
   ],
-  "types": "types/index.d.ts",
   "author": "NHN FE Development Lab <dl_javascript@nhn.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/nhn/tui.editor.git",
-    "directory": "plugins/table-merged-cell"
+    "directory": "plugins/alphatex"
   },
   "bugs": {
     "url": "https://github.com/nhn/tui.editor/issues"
@@ -42,7 +40,13 @@
     "build": "webpack build && npm run build:cdn",
     "prepare": "npm run build"
   },
+  "devDependencies": {
+    "cross-env": "^6.0.3"
+  },
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "@coderline/alphatab": "github:yshlin/alphaTab#v1.3.0.a"
   }
 }
