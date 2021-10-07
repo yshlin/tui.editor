@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8" />
+    <title>Editor</title>
+  </head>
+  <body>
+    <div class="code-html">
+      <!-- Editor -->
+      <h2>Editor</h2>
+      <div id="editor"></div>
+      <!-- Editor's Viewer -->
+      <h2>Viewer</h2>
+      <div id="viewer"></div>
+    </div>
+    <!-- Editor -->
+    <script type="module">
+      import { Editor } from 'http://localhost:8080/dist/index.js';
+      import mathjaxPlugin from '/dist/index.js';
+
+      const content = `$$tex
+x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}.
+$$`;
+
+      const editor = new Editor({
+        el: document.querySelector('#editor'),
+        previewStyle: 'vertical',
+        height: '500px',
+        initialValue: content,
+        plugins: [mathjaxPlugin]
+      });
+
+      const viewer = Editor.factory({
+        el: document.querySelector('#viewer'),
+        viewer: true,
+        height: '500px',
+        initialValue: content,
+        plugins: [mathjaxPlugin]
+      });
+    </script>
+  </body>
+</html>
