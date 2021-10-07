@@ -80,7 +80,8 @@
     "build": "node ./scripts/pkg-script.js --script build --type $type",
     "doc:dev": "node ./scripts/pkg-script.js --script doc:dev --type editor",
     "doc": "node ./scripts/pkg-script.js --script doc --type editor",
-    "publish:cdn": "node ./scripts/publish-cdn.js"
+    "publish:cdn": "node ./scripts/publish-cdn.js",
+    "prepare": "npm run build:all"
   },
   "workspaces": [
     "apps/*",

@@ -12,7 +12,8 @@
     "test:types": "tsc",
     "lint": "eslint .",
     "serve": "snowpack dev",
-    "build": "webpack build && rollup -c"
+    "build": "webpack build && rollup -c",
+    "prepare": "npm run build"
   },
   "homepage": "https://ui.toast.com",
   "bugs": {

@@ -37,7 +37,7 @@ export default class extends React.Component<EditorProps> {
 
   shouldComponentUpdate(nextProps: EditorProps) {
     const instance = this.getInstance();
-    const { height, previewStyle } = nextProps;
+    const { initialValue, height, previewStyle } = nextProps;
 
     if (height && this.props.height !== height) {
       instance.setHeight(height);
@@ -45,6 +45,11 @@ export default class extends React.Component<EditorProps> {
 
     if (previewStyle && this.props.previewStyle !== previewStyle) {
       instance.changePreviewStyle(previewStyle);
+    }
+
+    // update only when initial(empty) state
+    if (!this.props.initialValue && initialValue && this.props.initialValue !== initialValue) {
+      instance.setMarkdown(initialValue, false);
     }
 
     this.bindEventHandlers(nextProps);

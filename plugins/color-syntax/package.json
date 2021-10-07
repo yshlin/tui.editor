@@ -39,7 +39,8 @@
     "serve": "snowpack dev",
     "serve:ie": "webpack serve",
     "build:cdn": "webpack build --env cdn & webpack build --env cdn minify",
-    "build": "webpack build && npm run build:cdn"
+    "build": "webpack build && npm run build:cdn",
+    "prepare": "npm run build"
   },
   "devDependencies": {
     "cross-env": "^6.0.3"
